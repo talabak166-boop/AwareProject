@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Code2 } from 'lucide-react';
 
 export default function Hero() {
@@ -32,6 +31,7 @@ export default function Hero() {
             <button
               onClick={() => scrollToSection('contact')}
               className="group px-8 py-4 bg-gold-500 hover:bg-gold-600 text-black rounded-lg font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:shadow-gold-500/50"
+              data-testid="button-hero-get-started"
             >
               Get Started
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -40,6 +40,7 @@ export default function Hero() {
             <button
               onClick={() => scrollToSection('about')}
               className="px-8 py-4 border border-gold-500/50 hover:border-gold-400 text-white rounded-lg font-semibold transition-all hover:bg-gold-500/5"
+              data-testid="button-hero-learn-more"
             >
               Learn More
             </button>
@@ -47,15 +48,15 @@ export default function Hero() {
 
           <div className="mt-12 grid grid-cols-3 gap-8 max-w-md">
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="text-3xl font-bold text-gold-400">7+</div>
+              <div className="text-3xl font-bold text-gold-400" data-testid="text-years-active">7+</div>
               <div className="text-gray-400 text-sm">Years Active</div>
             </div>
             <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="text-3xl font-bold text-gold-400">50+</div>
+              <div className="text-3xl font-bold text-gold-400" data-testid="text-projects">50+</div>
               <div className="text-gray-400 text-sm">Projects</div>
             </div>
             <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              <div className="text-3xl font-bold text-gold-400">100%</div>
+              <div className="text-3xl font-bold text-gold-400" data-testid="text-dedicated">100%</div>
               <div className="text-gray-400 text-sm">Dedicated</div>
             </div>
           </div>

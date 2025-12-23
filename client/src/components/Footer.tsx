@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
 
 export default function Footer() {
@@ -24,6 +23,7 @@ export default function Footer() {
               <a
                 href="mailto:vincent.bremer.vuarnoz@gmail.com"
                 className="flex items-center gap-2 text-gray-400 hover:text-gold-400 transition-colors text-sm"
+                data-testid="link-footer-email"
               >
                 <Mail size={16} />
                 vincent.bremer.vuarnoz@gmail.com
@@ -31,7 +31,7 @@ export default function Footer() {
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
                 <div>
-                  Krude Møllevej 20<br />
+                  Krude Mollevej 20<br />
                   8654 Bryrup, Denmark
                 </div>
               </div>
@@ -45,6 +45,7 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 flex items-center justify-center rounded-lg bg-gold-500/10 hover:bg-gold-500/20 text-gold-400 transition-colors"
                 aria-label="LinkedIn"
+                data-testid="link-linkedin"
               >
                 <Linkedin size={18} />
               </a>
@@ -52,6 +53,7 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 flex items-center justify-center rounded-lg bg-gold-500/10 hover:bg-gold-500/20 text-gold-400 transition-colors"
                 aria-label="GitHub"
+                data-testid="link-github"
               >
                 <Github size={18} />
               </a>
@@ -59,6 +61,7 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 flex items-center justify-center rounded-lg bg-gold-500/10 hover:bg-gold-500/20 text-gold-400 transition-colors"
                 aria-label="Twitter"
+                data-testid="link-twitter"
               >
                 <Twitter size={18} />
               </a>
@@ -68,10 +71,10 @@ export default function Footer() {
 
         <div className="border-t border-gold-500/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm">
-              &copy; 2018-2025 Aware Programming. All rights reserved.
+            <p className="text-gray-500 text-sm" data-testid="text-copyright">
+              2018-2025 Aware Programming. All rights reserved.
             </p>
-            <p className="text-gray-500 text-sm mt-4 md:mt-0">
+            <p className="text-gray-500 text-sm mt-4 md:mt-0" data-testid="text-footer-cvr">
               CVR: 39150514 | Denmark
             </p>
           </div>

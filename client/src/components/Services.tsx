@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code2, Lightbulb, Users, Zap } from 'lucide-react';
 
 export default function Services() {
@@ -51,6 +50,7 @@ export default function Services() {
                 key={index}
                 className="animate-slide-up p-6 bg-gradient-to-br from-slate-900 to-black border border-gold-500/20 rounded-xl hover:border-gold-400/50 transition-all group hover:bg-gradient-to-br hover:from-gold-500/10 hover:to-black"
                 style={{ animationDelay: service.delay }}
+                data-testid={`card-service-${index}`}
               >
                 <div className="mb-4 p-3 bg-gold-500/20 rounded-lg w-fit group-hover:bg-gold-500/30 transition-colors">
                   <Icon size={24} className="text-gold-400" />
@@ -65,7 +65,7 @@ export default function Services() {
                 </p>
 
                 <div className="mt-4 flex items-center text-gold-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                  Learn more →
+                  Learn more
                 </div>
               </div>
             );

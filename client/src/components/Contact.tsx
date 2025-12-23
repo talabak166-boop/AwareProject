@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
@@ -15,14 +15,10 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-      const response = await fetch(`${supabaseUrl}/functions/v1/send-email`, {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${anonKey}`,
         },
         body: JSON.stringify(formData),
       });
@@ -71,7 +67,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Email</h3>
-                <a href="mailto:vincent.bremer.vuarnoz@gmail.com" className="text-gray-400 hover:text-gold-400 transition-colors">
+                <a href="mailto:vincent.bremer.vuarnoz@gmail.com" className="text-gray-400 hover:text-gold-400 transition-colors" data-testid="link-email">
                   vincent.bremer.vuarnoz@gmail.com
                 </a>
               </div>
@@ -83,8 +79,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Address</h3>
-                <p className="text-gray-400">
-                  Krude Møllevej 20<br />
+                <p className="text-gray-400" data-testid="text-address">
+                  Krude Mollevej 20<br />
                   8654 Bryrup<br />
                   Denmark
                 </p>
@@ -97,7 +93,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">CVR Number</h3>
-                <p className="text-gray-400">39150514</p>
+                <p className="text-gray-400" data-testid="text-cvr-contact">39150514</p>
               </div>
             </div>
           </div>
@@ -116,6 +112,7 @@ export default function Contact() {
                 required
                 className="w-full px-4 py-3 bg-slate-900 border border-gold-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 transition-colors"
                 placeholder="Your name"
+                data-testid="input-name"
               />
             </div>
 
@@ -132,6 +129,7 @@ export default function Contact() {
                 required
                 className="w-full px-4 py-3 bg-slate-900 border border-gold-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 transition-colors"
                 placeholder="your@email.com"
+                data-testid="input-email"
               />
             </div>
 
@@ -148,6 +146,7 @@ export default function Contact() {
                 rows={5}
                 className="w-full px-4 py-3 bg-slate-900 border border-gold-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 transition-colors resize-none"
                 placeholder="Your message..."
+                data-testid="input-message"
               ></textarea>
             </div>
 
@@ -155,13 +154,14 @@ export default function Contact() {
               type="submit"
               disabled={loading}
               className="w-full py-3 bg-gold-500 hover:bg-gold-600 disabled:bg-gold-400 text-black font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
+              data-testid="button-submit-contact"
             >
               {loading ? 'Sending...' : 'Send Message'}
               <Send size={18} />
             </button>
 
             {submitted && (
-              <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300 animate-slide-up">
+              <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300 animate-slide-up" data-testid="text-success-message">
                 Message sent successfully! We'll get back to you soon.
               </div>
             )}

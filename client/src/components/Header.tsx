@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
@@ -25,18 +25,21 @@ export default function Header() {
             <button
               onClick={() => scrollToSection('about')}
               className="text-gray-300 hover:text-gold-400 transition-colors text-sm font-medium"
+              data-testid="button-nav-about"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
               className="text-gray-300 hover:text-gold-400 transition-colors text-sm font-medium"
+              data-testid="button-nav-services"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="px-4 py-2 bg-gold-500 hover:bg-gold-600 text-black rounded-lg font-semibold transition-colors"
+              data-testid="button-nav-contact"
             >
               Contact
             </button>
@@ -45,6 +48,7 @@ export default function Header() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gold-400"
+            data-testid="button-mobile-menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -55,18 +59,21 @@ export default function Header() {
             <button
               onClick={() => scrollToSection('about')}
               className="block w-full text-left px-4 py-2 text-gray-300 hover:text-gold-400"
+              data-testid="button-mobile-about"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
               className="block w-full text-left px-4 py-2 text-gray-300 hover:text-gold-400"
+              data-testid="button-mobile-services"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="block w-full text-left px-4 py-2 bg-gold-500 text-black rounded-lg font-semibold"
+              data-testid="button-mobile-contact"
             >
               Contact
             </button>

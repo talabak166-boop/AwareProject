@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircle2, MapPin, Calendar } from 'lucide-react';
 
 export default function About() {
@@ -56,7 +55,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <div className="p-6 bg-gradient-to-br from-gold-500/10 to-transparent border border-gold-500/30 rounded-xl hover:border-gold-400/50 transition-all">
-              <div className="text-3xl font-bold text-gold-400 mb-2">2018</div>
+              <div className="text-3xl font-bold text-gold-400 mb-2" data-testid="text-founded-year">2018</div>
               <p className="text-gray-300 font-semibold mb-1">Founded</p>
               <p className="text-gray-400 text-sm">January 1, 2018</p>
             </div>
@@ -76,7 +75,7 @@ export default function About() {
             <div className="p-6 bg-gradient-to-br from-gold-500/10 to-transparent border border-gold-500/30 rounded-xl hover:border-gold-400/50 transition-all">
               <div className="text-xl font-bold text-gold-400 mb-2">CVR</div>
               <p className="text-gray-300 font-semibold mb-1">Registration</p>
-              <p className="text-gray-400 text-sm">39150514</p>
+              <p className="text-gray-400 text-sm" data-testid="text-cvr">39150514</p>
             </div>
           </div>
         </div>
