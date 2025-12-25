@@ -52,8 +52,15 @@ export default function Services() {
                 style={{ animationDelay: service.delay }}
                 data-testid={`card-service-${index}`}
               >
-                <div className="mb-4 p-3 bg-gold-500/20 rounded-lg w-fit group-hover:bg-gold-500/30 transition-colors">
-                  <Icon size={24} className="text-gold-400" />
+                <div className="mb-4 flex items-center justify-between">
+                  <div className="p-3 bg-gold-500/20 rounded-lg group-hover:bg-gold-500/30 transition-colors">
+                    <Icon size={24} className="text-gold-400" />
+                  </div>
+                  <img 
+                    src="https://i.postimg.cc/MpXQdKCJ/App-Lo-Go-Without-Back.png" 
+                    alt="" 
+                    className="w-8 h-8 object-contain opacity-20 group-hover:opacity-40 transition-opacity"
+                  />
                 </div>
 
                 <h3 className="text-lg font-bold text-white mb-2">

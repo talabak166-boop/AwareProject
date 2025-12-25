@@ -14,14 +14,23 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col justify-center relative z-10">
         <div className="animate-slide-up">
-          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full">
-            <Code2 size={16} className="text-gold-400" />
-            <span className="text-gold-400 text-sm font-medium">Since 2018</span>
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-8">
+            <img 
+              src="https://i.postimg.cc/MpXQdKCJ/App-Lo-Go-Without-Back.png" 
+              alt="Aware Programming Logo" 
+              className="w-24 h-24 object-contain animate-float"
+              data-testid="img-hero-logo"
+            />
+            <div>
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full">
+                <Code2 size={16} className="text-gold-400" />
+                <span className="text-gold-400 text-sm font-medium">Since 2018</span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-2 leading-tight">
+                Transform Your <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">Digital Vision</span> Into Reality
+              </h1>
+            </div>
           </div>
-
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Transform Your <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">Digital Vision</span> Into Reality
-          </h1>
 
           <p className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
             Professional programming and business consulting services. Empowering companies to innovate, grow, and succeed in the digital age.
