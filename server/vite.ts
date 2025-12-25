@@ -1,11 +1,11 @@
 import express, { type Express } from "express";
 import fs from "fs";
-import path from "path";
+import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer, type ViteDevServer } from "vite";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = dirname(__filename);
 
 const viteLogger = {
   hasWarned: false,
