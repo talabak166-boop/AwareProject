@@ -15,9 +15,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-              <span className="text-black font-bold text-lg">A</span>
-            </div>
+            <img 
+              src="https://i.postimg.cc/MpXQdKCJ/App-Lo-Go-Without-Back.png" 
+              alt="Aware Programming Logo" 
+              className="w-10 h-10 object-contain"
+              data-testid="img-logo"
+            />
             <span className="text-white font-bold text-xl">Aware</span>
           </div>
 

@@ -7,9 +7,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-                <span className="text-black font-bold">A</span>
-              </div>
+              <img 
+                src="https://i.postimg.cc/MpXQdKCJ/App-Lo-Go-Without-Back.png" 
+                alt="Aware Programming Logo" 
+                className="w-8 h-8 object-contain"
+                data-testid="img-footer-logo"
+              />
               <span className="text-white font-bold">Aware Programming</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
