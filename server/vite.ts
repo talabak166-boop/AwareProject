@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { createServer as createViteServer, type ViteDevServer } from "vite";
 
-export function log(message: string, source = "express") {
+const viteLogger = {
   hasWarned: false,
   info(msg: string) {
     console.log(msg);
