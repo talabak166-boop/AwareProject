@@ -18,7 +18,7 @@ export async function registerRoutes(app: Express): Promise<void> {
 
       await storage.createContactMessage({ name, email, message });
 
-      const recipientEmail = "vincent.bremer.vuarnoz@gmail.com";
+      const recipientEmail = "Info@awareprogramming.online";
       const subject = `New Message from ${name} - Aware Programming`;
       const body = `
 Name: ${name}

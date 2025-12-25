@@ -21,12 +21,12 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href="mailto:vincent.bremer.vuarnoz@gmail.com"
+                href="mailto:Info@awareprogramming.online"
                 className="flex items-center gap-2 text-gray-400 hover:text-gold-400 transition-colors text-sm"
                 data-testid="link-footer-email"
               >
                 <Mail size={16} />
-                vincent.bremer.vuarnoz@gmail.com
+                Info@awareprogramming.online
               </a>
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />

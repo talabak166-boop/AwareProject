@@ -67,8 +67,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Email</h3>
-                <a href="mailto:vincent.bremer.vuarnoz@gmail.com" className="text-gray-400 hover:text-gold-400 transition-colors" data-testid="link-email">
-                  vincent.bremer.vuarnoz@gmail.com
+                <a href="mailto:Info@awareprogramming.online" className="text-gray-400 hover:text-gold-400 transition-colors" data-testid="link-email">
+                  Info@awareprogramming.online
                 </a>
               </div>
             </div>
@@ -94,6 +94,18 @@ export default function Contact() {
               <div>
                 <h3 className="text-white font-semibold mb-1">CVR Number</h3>
                 <p className="text-gray-400" data-testid="text-cvr-contact">39150514</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-gold-500/20 rounded-lg">
+                <Phone size={24} className="text-gold-400" />
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-1">Phone Number</h3>
+                <a href="tel:201280059860" className="text-gray-400 hover:text-gold-400 transition-colors" data-testid="link-phone">
+                  201280059860
+                </a>
               </div>
             </div>
           </div>
