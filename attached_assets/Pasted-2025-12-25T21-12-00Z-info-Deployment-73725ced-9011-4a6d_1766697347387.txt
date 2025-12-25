@@ -1,0 +1,93 @@
+2025-12-25T21:12:00Z info: Deployment: 73725ced-9011-4a6d-9318-69bc66b8c505
+2025-12-25T21:12:00Z info: Running Security Scan
+2025-12-25T21:12:02Z info: Security Scan Complete
+2025-12-25T21:12:02Z info: Connecting to builder
+2025-12-25T21:12:02Z info: Builder connected
+2025-12-25T21:12:03Z info: Installing packages
+--> npm install
+
+
+up to date, audited 311 packages in 3s
+
+  run `npm fund` for details
+
+
+10 vulnerabilities (1 low, 7 moderate, 2 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice
+
+2025-12-25T21:12:06Z info: Starting Build
+
+> aware-programming@1.0.0 build
+> vite build && esbuild server/index.ts --bundle --platform=node --outfile=dist/index.cjs --format=cjs --packages=external
+
+
+vite v5.4.8 building for production...
+
+transforming...
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+✓ 1476 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../dist/public/index.html                   0.93 kB │ gzip:  0.47 kB
+
+✓ built in 4.83s
+
+▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+
+    server/index.ts:7:33:
+      7 │ const __filename = fileURLToPath(import.meta.url);
+        ╵                                  ~~~~~~~~~~~
+
+  You need to set the output format to "esm" for "import.meta" to work correctly.
+
+
+
+  dist/index.cjs  7.7kb
+
+⚡ Done in 6ms
+
+2025-12-25T21:12:13Z info: Pushing pid1 binary layer...
+2025-12-25T21:12:14Z info: Pushing Repl layer...
+2025-12-25T21:12:14Z info: Pushing hosting layer...
+2025-12-25T21:12:14Z info: Created hosting layer
+2025-12-25T21:12:14Z info: Created pid1 binary layer
+2025-12-25T21:12:21Z info: Created Repl layer
+2025-12-25T21:12:22Z info: Pushed image manifest
+2025-12-25T21:12:24Z info: Pushed soci index manifest
+2025-12-25T21:12:26Z info: Creating Autoscale service
+    at Object.<anonymous> (/home/runner/workspace/dist/index.cjs:124:47)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+}
+    ^
+    ^
+    at Module._load (node:internal/modules/cjs/loader:1096:12)
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of URL. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of URL. Received undefined
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    throw new ERR_INVALID_ARG_TYPE('path', ['string', 'URL'], path);
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+command finished with error [node dist/index.cjs]: exit status 1
+Node.js v20.19.3
+crash loop detected
+2025-12-25T21:15:42Z error: The deployment is crash looping. This can happen if the run command fails or exits immediately after starting. Check the logs for more information.

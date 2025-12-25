@@ -1,13 +1,9 @@
 import express, { type Express } from "express";
 import fs from "fs";
-import path, { dirname } from "path";
-import { fileURLToPath } from "url";
+import path from "path";
 import { createServer as createViteServer, type ViteDevServer } from "vite";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const viteLogger = {
+export function log(message: string, source = "express") {
   hasWarned: false,
   info(msg: string) {
     console.log(msg);
@@ -47,7 +43,7 @@ export async function setupVite(app: Express) {
     server: { middlewareMode: true },
     appType: "custom",
     customLogger: viteLogger,
-    root: path.resolve(__dirname, "..", "client"),
+    root: path.resolve(process.cwd(), "client"),
   });
 
   app.use(vite.middlewares);
@@ -55,7 +51,7 @@ export async function setupVite(app: Express) {
     const url = req.originalUrl;
 
     try {
-      const clientPath = path.resolve(__dirname, "..", "client");
+      const clientPath = path.resolve(process.cwd(), "client");
       let template = await fs.promises.readFile(
         path.resolve(clientPath, "index.html"),
         "utf-8"
@@ -72,7 +68,7 @@ export async function setupVite(app: Express) {
 }
 
 export function serveStatic(app: Express) {
-  const distPath = path.resolve(__dirname, "..", "dist", "public");
+  const distPath = path.resolve(process.cwd(), "dist", "public");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
